@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="hero">
+    <center>
+   <dialog id="myDialog">
+        <form method="dialog" id="formDialog">
+         <h1>Initializing System ..</h1>
+         <center><div class="loader"></div></center>
+         <menu>
+              <button id="dialogClose">skip..</button>
+
+        </menu>
+        </form>
+    </center>
+    </dialog>
+    <main class="content">
+        <div id="textBoxs">
+             <textarea name="text" id="text" placeholder=" From Type..."></textarea>
+             <textarea name="text" id="text2" placeholder="To Type..." ></textarea>
+        </div>
+        <button   id="convertBtn">Convert</button>
+        <div id="lgSelecter">
+            <button id="btnSpeech"><i class="fa-solid fa-volume-low"></i></button>
+        <div id="convert2">
+        <select id="fromSelect1">
+            <option >From Lang</option>
+            <option value="en-GB">English (United Kingdom)</option>
+            <option value="en-US">English (United States)</option>
+            <option value="zh-CN">Chinese (Simplified, China)</option>
+            <option value="zh-TW">Chinese (Traditional, Taiwan)</option>
+            <option value="es-ES">Spanish (Spain)</option>
+            <option value="es-MX">Spanish (Mexico)</option>
+            <option value="ar-SA">Arabic (Saudi Arabia)</option>
+            <option value="hi-IN">Hindi (India)</option>
+            <option value="bn-BD">Bengali (Bangladesh)</option>
+            <option value="pt-PT">Portuguese (Portugal)</option>
+            <option value="pt-BR">Portuguese (Brazil)</option>
+            <option value="ru-RU">Russian (Russia)</option>
+            <option value="ja-JP">Japanese (Japan)</option>
+            <option value="pa-IN">Punjabi (India)</option>
+            <option value="de-DE">German (Germany)</option>
+            <option value="jv-ID">Javanese (Indonesia)</option>
+            <option value="wuu-CN">Wu (Shanghainese, China)</option>
+            <option value="fr-FR">French (France)</option>
+            <option value="te-IN">Telugu (India)</option>
+            <option value="vi-VN">Vietnamese (Vietnam)</option>
+            <option value="mr-IN">Marathi (India)</option>
+            <option value="ko-KR">Korean (South Korea)</option>
+            <option value="ta-IN">Tamil (India)</option>
+            <option value="tr-TR">Turkish (Turkey)</option>
+            <option value="it-IT">Italian (Italy)</option>
+            <option value="pl-PL">Polish (Poland)</option>
+            <option value="th-TH">Thai (Thailand)</option>
+            <option value="ms-MY">Malay (Malaysia)</option>
+            <option value="nl-NL">Dutch (Netherlands)</option>
+            <option value="sv-SE">Swedish (Sweden)</option>
+            <option value="da-DK">Danish (Denmark)</option>
+            <option value="no-NO">Norwegian (Norway)</option>
+            <option value="fi-FI">Finnish (Finland)</option>
+            <option value="el-GR">Greek (Greece)</option>
+            <option value="he-IL">Hebrew (Israel)</option>
+            <option value="hu-HU">Hungarian (Hungary)</option>
+            <option value="cs-CZ">Czech (Czech Republic)</option>
+            <option value="ro-RO">Romanian (Romania)</option>
+            <option value="bg-BG">Bulgarian (Bulgaria)</option>
+            <option value="uk-UA">Ukrainian (Ukraine)</option>
+            <option value="sk-SK">Slovak (Slovakia)</option>
+            <option value="sl-SI">Slovenian (Slovenia)</option>
+            <option value="et-EE">Estonian (Estonia)</option>
+            <option value="lv-LV">Latvian (Latvia)</option>
+            <option value="lt-LT">Lithuanian (Lithuania)</option>
+            <option value="hr-HR">Croatian (Croatia)</option>
+            <option value="sr-RS">Serbian (Serbia)</option>
+            <option value="az-AZ">Azerbaijani (Azerbaijan)</option>
+            <option value="ka-GE">Georgian (Georgia)</option>
+        </select>
+        <button id="btn2" onclick={recoder()}><i class="fa-solid fa-microphone-lines"></i></button>                <!-- recoding start btn -->
+
+        <select id="toSelect2" >
+            <option >To Lang</option>
+
+            <option value="en-GB">English (United Kingdom)</option>
+            <option value="en-US">English (United States)</option>
+            <option value="zh-CN">Chinese (Simplified, China)</option>
+            <option value="zh-TW">Chinese (Traditional, Taiwan)</option>
+            <option value="es-ES">Spanish (Spain)</option>
+            <option value="es-MX">Spanish (Mexico)</option>
+            <option value="ar-SA">Arabic (Saudi Arabia)</option>
+            <option value="hi-IN">Hindi (India)</option>
+            <option value="bn-BD">Bengali (Bangladesh)</option>
+            <option value="pt-PT">Portuguese (Portugal)</option>
+            <option value="pt-BR">Portuguese (Brazil)</option>
+            <option value="ru-RU">Russian (Russia)</option>
+            <option value="ja-JP">Japanese (Japan)</option>
+            <option value="pa-IN">Punjabi (India)</option>
+            <option value="de-DE">German (Germany)</option>
+            <option value="jv-ID">Javanese (Indonesia)</option>
+            <option value="wuu-CN">Wu (Shanghainese, China)</option>
+            <option value="fr-FR">French (France)</option>
+            <option value="te-IN">Telugu (India)</option>
+            <option value="vi-VN">Vietnamese (Vietnam)</option>
+            <option value="mr-IN">Marathi (India)</option>
+            <option value="ko-KR">Korean (South Korea)</option>
+            <option value="ta-IN">Tamil (India)</option>
+            <option value="tr-TR">Turkish (Turkey)</option>
+            <option value="it-IT">Italian (Italy)</option>
+            <option value="pl-PL">Polish (Poland)</option>
+            <option value="th-TH">Thai (Thailand)</option>
+            <option value="ms-MY">Malay (Malaysia)</option>
+            <option value="nl-NL">Dutch (Netherlands)</option>
+            <option value="sv-SE">Swedish (Sweden)</option>
+            <option value="da-DK">Danish (Denmark)</option>
+            <option value="no-NO">Norwegian (Norway)</option>
+            <option value="fi-FI">Finnish (Finland)</option>
+            <option value="el-GR">Greek (Greece)</option>
+            <option value="he-IL">Hebrew (Israel)</option>
+            <option value="hu-HU">Hungarian (Hungary)</option>
+            <option value="cs-CZ">Czech (Czech Republic)</option>
+            <option value="ro-RO">Romanian (Romania)</option>
+            <option value="bg-BG">Bulgarian (Bulgaria)</option>
+            <option value="uk-UA">Ukrainian (Ukraine)</option>
+            <option value="sk-SK">Slovak (Slovakia)</option>
+            <option value="sl-SI">Slovenian (Slovenia)</option>
+            <option value="et-EE">Estonian (Estonia)</option>
+            <option value="lv-LV">Latvian (Latvia)</option>
+            <option value="lt-LT">Lithuanian (Lithuania)</option>
+            <option value="hr-HR">Croatian (Croatia)</option>
+            <option value="sr-RS">Serbian (Serbia)</option>
+            <option value="az-AZ">Azerbaijani (Azerbaijan)</option>
+            <option value="ka-GE">Georgian (Georgia)</option>
+        </select>
+    </div>
+        <button id="btnSpeech2"><i class="fa-solid fa-volume-low"></i></button>
+
+        </div>
+    </main>
+</div>
+<script src="jscript.js"></script>
+</body>
+</html>
