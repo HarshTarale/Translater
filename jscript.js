@@ -137,11 +137,12 @@ document.addEventListener("DOMContentLoaded", () => {
       speaker("select convert language")
      setTimeout(()=>{
        toSelect2.style.backgroundColor="white";
+
      },1000)
-    
-    }else{
-         textArea2.innerText=translet;
+     console.log("error2")
+
     }
+         textArea2.innerText=translet;    
    
    }
 
