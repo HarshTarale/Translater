@@ -68,7 +68,7 @@ menu{
     background-image:linear-gradient(white,rgba(255, 255, 255, 0.568),rgb(23, 162, 255)) ;
     border-radius: 10px;
     box-shadow: 0px 0px 10px white;
-    padding: 2vw 1vw;
+    padding: 2vw ;
     display: flex;
     align-items: center;
     gap: 2vw;
@@ -90,7 +90,7 @@ menu{
     font-size: 20px;
 }
 #text:focus{
-    border:solid 2px rgba(255, 242, 0, 0.874);
+    border:solid 2px rgba(0, 195, 255, 0.874);
 }
 #text2{
     scrollbar-width: none;
@@ -104,8 +104,9 @@ menu{
 }
 
 #text2:focus{
-    border:solid 2px rgba(255, 242, 0, 0.874);
-}#lgelecter{
+    border:solid 2px rgba(0, 217, 255, 0.874);
+}
+#lgelecter{
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -121,16 +122,6 @@ select{
 
 }
 
-#btn{
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background-color:yellow ;
-    padding: 1vw 2vw;
-    cursor: pointer;
-
-
-}
 #btn2{
     width: 40px;
     background:transparent;
@@ -155,10 +146,11 @@ select{
     flex-direction: column;
     gap: 20px;
 }
-#convert2{
+#lgSelecter-input{
     display: flex;
     gap: 5px;
     cursor: pointer;
+
 
 }
 #btnSpeech2{
@@ -190,10 +182,29 @@ i{
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+
 
 
 }
 @media (width <830px) {
+    
+#formDialog{
+    width: 80vw;
+}
+
+.loader{
+    width: 10vw;
+    height: 10vw;
+    border-left:solid 2px rgb(0, 179, 255) ;
+    border-right:solid 2px rgb(0, 179, 255) ;
+}
+
+#dialogClose{
+    padding: 2vw 5vw;
+}
+
+
     .content{
         display: flex;
         flex-direction: column;
@@ -201,4 +212,32 @@ i{
     #textBoxs{
         flex-direction: row;
     }
+    
+#text{
+    min-width: 180px;
+    min-height: 100px;
+}
+#text:focus{
+   border:solid 2px rgba(0, 200, 255, 0.874);
+}
+#text2{
+    min-width: 180px;
+    min-height: 100px;
+
+}
+
+#text2:focus{
+   border:solid 2px rgba(0, 217, 255, 0.874);
+
+}
+select{
+    width: 140px;
+}
+#btnSpeech2{
+    transform: translate(300px, -100px);
+
+}
+
+
+
 }
